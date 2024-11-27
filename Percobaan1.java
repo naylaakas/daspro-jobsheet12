@@ -13,7 +13,7 @@ public class Percobaan1 {
     static int faktorialIteratif(int n) {
         int faktor = 1;
         for (int i = n; i >= 1; i--) {
-            faktor = faktor * 1;
+            faktor = faktor * i;
         }
         return faktor;
     }

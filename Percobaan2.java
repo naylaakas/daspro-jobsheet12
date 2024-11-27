@@ -9,6 +9,15 @@ public class Percobaan2 {
             return (x * hitungPangkat(x, y - 1));
         }
     }  
+    static String cara(int x, int y, String deret) {
+        if (y == 0) {
+            return deret + "1 = ";
+        } 
+        else {
+            deret += x + "x";
+            return cara(x, y - 1, deret);
+        }
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Bilangan yang dihitung: ");
@@ -16,6 +25,8 @@ public class Percobaan2 {
         System.out.print("Pangkat: ");
         int pangkat = sc.nextInt();
         
-        System.out.println(hitungPangkat(bilangan, pangkat));
+        String  hasil = cara(bilangan, pangkat, "");
+        int total = hitungPangkat(bilangan, pangkat);
+        System.out.println(hasil + total);
     }
 }
